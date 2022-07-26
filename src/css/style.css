@@ -1,12 +1,34 @@
+@font-face {
+  font-family: "Popins-Regular";
+  src: url(../fonts/poppins_regular.ttf);
+}
+@font-face {
+  font-family: "Popins-Semibold";
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: "Popins-Bold";
+  src: url(../fonts/Poppins-Bold.ttf);
+}
 * {
+  font-family: "Popins-Regular";
   margin: 0;
   padding: 0;
+}
+
+.hLink {
+  text-decoration: none;
+  color: black;
+}
+.hLink:hover {
+  text-decoration: underline;
 }
 
 .max-content-width {
   width: 1200px;
   max-width: 100%;
   margin: auto;
+  padding: 0 2%;
 }
 
 #banner-section {
@@ -29,12 +51,36 @@ header {
   z-index: 9;
   justify-content: space-between;
   padding: 0 3rem;
+  transition: all 0.3s ease;
 }
 header .logo-container {
   width: 200px;
+  display: flex;
+  align-items: center;
 }
 header .logo-container img {
   width: 100%;
+}
+header .logo-container .logoSession {
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1rem;
+  padding-left: 1.5rem;
+}
+header .logo-container .logoSession::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 1px;
+  height: 65px;
+  transform: translateY(-50%);
+  background-color: #707070;
+}
+header .top-nav {
+  display: flex;
+  align-items: center;
 }
 header .top-nav ul {
   list-style: none;
@@ -57,7 +103,7 @@ header .top-nav ul li a::before {
   width: 100%;
   height: 2px;
   border-radius: 10px;
-  background-color: black;
+  background-color: #0abeb2;
   transform: scale(0);
   transform-origin: center;
   transition: all 0.3s ease;
@@ -65,19 +111,93 @@ header .top-nav ul li a::before {
 header .top-nav ul li a:hover::before {
   transform: scale(1);
 }
+header.grayBG {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.0509803922);
+}
 
 .about-entrepreneur {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: 8rem 0;
 }
 .about-entrepreneur .entrep-image {
-  width: 40%;
+  width: 45%;
 }
 .about-entrepreneur .entrep-image img {
   width: 100%;
 }
 .about-entrepreneur .entrep-description {
-  width: 40%;
+  width: 45%;
   display: flex;
   align-items: center;
+}
+
+footer#contact-info {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+footer#contact-info::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  height: 10px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+footer#contact-info .logo-container {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+footer#contact-info .logo-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  width: 1px;
+  height: 50%;
+  transform: translateY(-50%);
+  background-color: #707070;
+}
+footer#contact-info .contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+footer#contact-info .contact-info .name {
+  color: #0abeb2;
+}
+
+.sessionPage .ssContainer {
+  margin-top: 8rem;
+}
+.sessionPage .ssContainer .session-sub {
+  display: flex;
+  padding-top: 12rem;
+  justify-content: space-between;
+}
+.sessionPage .ssContainer .session-sub .discription {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer {
+  width: 60%;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer img {
+  width: 100%;
+}
+.sessionPage .ssContainer .session-sub:first-child {
+  padding-top: 8rem;
+}
+.sessionPage .ssContainer .session-sub:last-child {
+  padding-bottom: 10rem;
 }/*# sourceMappingURL=style.css.map */
