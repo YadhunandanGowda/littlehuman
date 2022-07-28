@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Popins-Regular";
-  src: url(../fonts/poppins_regular.ttf);
+  src: url(../fonts/Poppins-Regular.ttf);
 }
 @font-face {
   font-family: "Popins-Semibold";
@@ -9,6 +9,10 @@
 @font-face {
   font-family: "Popins-Bold";
   src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Alishia-Mekayla";
+  src: url(../fonts/Alishia-Mekayla.otf);
 }
 * {
   font-family: "Popins-Regular";
@@ -22,13 +26,6 @@
 }
 .hLink:hover {
   text-decoration: underline;
-}
-
-.max-content-width {
-  width: 1200px;
-  max-width: 100%;
-  margin: auto;
-  padding: 0 2%;
 }
 
 #banner-section {
@@ -48,18 +45,17 @@ header {
   left: 0;
   right: 0;
   display: flex;
-  z-index: 9;
+  z-index: 999;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0.5rem 3rem;
   transition: all 0.3s ease;
 }
 header .logo-container {
-  width: 200px;
   display: flex;
   align-items: center;
 }
 header .logo-container img {
-  width: 100%;
+  width: 150px;
 }
 header .logo-container .logoSession {
   position: relative;
@@ -74,7 +70,7 @@ header .logo-container .logoSession::before {
   top: 50%;
   left: 0%;
   width: 1px;
-  height: 65px;
+  height: 50px;
   transform: translateY(-50%);
   background-color: #707070;
 }
@@ -85,9 +81,10 @@ header .top-nav {
 header .top-nav ul {
   list-style: none;
   display: flex;
+  margin: 0;
 }
 header .top-nav ul li {
-  margin: 2rem;
+  margin: 0 1.5rem;
 }
 header .top-nav ul li a {
   position: relative;
@@ -101,7 +98,7 @@ header .top-nav ul li a::before {
   bottom: 5px;
   left: 0px;
   width: 100%;
-  height: 2px;
+  height: 4px;
   border-radius: 10px;
   background-color: #0abeb2;
   transform: scale(0);
@@ -119,7 +116,8 @@ header.grayBG {
 .about-entrepreneur {
   display: flex;
   justify-content: space-between;
-  margin: 8rem 0;
+  padding-top: 5rem;
+  padding: 8rem;
 }
 .about-entrepreneur .entrep-image {
   width: 45%;
@@ -131,6 +129,9 @@ header.grayBG {
   width: 45%;
   display: flex;
   align-items: center;
+}
+.about-entrepreneur .entrep-description .name {
+  font-family: "Alishia-Mekayla";
 }
 
 footer#contact-info {
@@ -162,9 +163,12 @@ footer#contact-info .logo-container::after {
   top: 50%;
   right: 0%;
   width: 1px;
-  height: 50%;
+  height: 70%;
   transform: translateY(-50%);
   background-color: #707070;
+}
+footer#contact-info .logo-container img {
+  width: 350px;
 }
 footer#contact-info .contact-info {
   display: flex;
@@ -175,29 +179,182 @@ footer#contact-info .contact-info {
 footer#contact-info .contact-info .name {
   color: #0abeb2;
 }
+footer#contact-info .contact-info .icon-sec {
+  display: flex;
+}
+footer#contact-info .contact-info .icon-sec a {
+  padding: 0.5rem;
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
+footer#contact-info .contact-info .icon-sec a img {
+  width: 30px;
+}
+footer#contact-info .contact-info .icon-sec a:hover {
+  transform: scale(1.1);
+}
 
-.sessionPage .ssContainer {
-  margin-top: 8rem;
+.sessionPage {
+  padding: 0 8rem;
 }
 .sessionPage .ssContainer .session-sub {
+  position: relative;
   display: flex;
-  padding-top: 12rem;
   justify-content: space-between;
 }
+.sessionPage .ssContainer .session-sub:last-child::before {
+  display: none;
+}
+.sessionPage .ssContainer .session-sub::before {
+  content: "";
+  left: -33px;
+  bottom: 0;
+  border: 1px dashed black;
+  width: 69.4%;
+  position: absolute;
+}
 .sessionPage .ssContainer .session-sub .discription {
+  position: relative;
   display: flex;
   align-items: center;
   width: 30%;
+  padding: 6rem 0;
+}
+.sessionPage .ssContainer .session-sub .discription .brief {
+  position: absolute;
+  left: -130px;
+  display: flex;
+  color: #585858;
+  top: 50%;
+  background: white;
+  padding: 6px;
+  transform: rotate(270deg) translateY(-50%);
+}
+.sessionPage .ssContainer .session-sub .discription::before {
+  content: "";
+  left: -38px;
+  top: 0;
+  border: 1px dashed black;
+  height: 100%;
+  position: absolute;
 }
 .sessionPage .ssContainer .session-sub .sliderContianer {
   width: 60%;
+  padding: 6rem 0;
 }
 .sessionPage .ssContainer .session-sub .sliderContianer img {
   width: 100%;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider {
+  height: 50vh;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .slick-track,
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .slick-list {
+  height: 100%;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .slick-track img,
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .slick-list img {
+  padding: 0 2px;
+  height: 100%;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .sliderArr {
+  border: none;
+  background: rgba(129, 129, 129, 0.5);
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .sliderArr.prev-arr {
+  right: unset;
+  left: 0px;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .sliderArr.prev-arr img {
+  left: 0px;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .sliderArr img {
+  width: 10px;
+  position: relative;
+  left: 0px;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .slick-dots {
+  bottom: 0px;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .slick-dots li button:before {
+  font-size: 1.5rem;
+  opacity: 1;
+  color: white;
+}
+.sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider .slick-dots li.slick-active button:before {
+  color: red;
 }
 .sessionPage .ssContainer .session-sub:first-child {
   padding-top: 8rem;
 }
 .sessionPage .ssContainer .session-sub:last-child {
   padding-bottom: 10rem;
+}
+
+.home-page .slider-container {
+  margin-bottom: 3rem;
+}
+.home-page .slider-container .ttlCntr {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.home-page .slider-container .ttlCntr .ltlTtl {
+  font-family: "Alishia-Mekayla";
+  margin: 0;
+}
+.home-page .slider-container .ttlCntr .gallSub {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 1rem;
+}
+.home-page .slider-container #sliderPlay {
+  height: 70vh;
+}
+.home-page .slider-container #sliderPlay .slick-track,
+.home-page .slider-container #sliderPlay .slick-list {
+  height: 100%;
+}
+.home-page .slider-container #sliderPlay .slick-track img,
+.home-page .slider-container #sliderPlay .slick-list img {
+  padding: 0 2px;
+  height: 100%;
+}
+.home-page .slider-container #sliderPlay .sliderArr {
+  border: none;
+  background: rgba(129, 129, 129, 0.5);
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+.home-page .slider-container #sliderPlay .sliderArr.prev-arr {
+  right: unset;
+  left: 0px;
+}
+.home-page .slider-container #sliderPlay .sliderArr.prev-arr img {
+  left: 0px;
+}
+.home-page .slider-container #sliderPlay .sliderArr img {
+  width: 10px;
+  position: relative;
+  left: 0px;
+}
+.home-page .slider-container #sliderPlay .slick-dots {
+  bottom: 10px;
+}
+.home-page .slider-container #sliderPlay .slick-dots li button:before {
+  font-size: 1.5rem;
+  opacity: 1;
+  color: white;
+}
+.home-page .slider-container #sliderPlay .slick-dots li.slick-active button:before {
+  color: red;
 }/*# sourceMappingURL=style.css.map */

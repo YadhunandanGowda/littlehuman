@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Popins-Regular";
-  src: url(../fonts/poppins_regular.ttf);
+  src: url(../fonts/Poppins-Regular.ttf);
 }
 @font-face {
   font-family: "Popins-Semibold";
@@ -9,6 +9,10 @@
 @font-face {
   font-family: "Popins-Bold";
   src: url(../fonts/Poppins-Bold.ttf);
+}
+@font-face {
+  font-family: "Alishia-Mekayla";
+  src: url(../fonts/Alishia-Mekayla.otf);
 }
 
 * {
@@ -25,12 +29,11 @@
   }
 }
 
-.max-content-width {
-  width: 1200px;
-  max-width: 100%;
-  margin: auto;
-  padding: 0 2%;
-}
+// .max-content-width {
+//   max-width: 100%;
+//   margin: auto;
+//   padding: 0 2%;
+// }
 
 #banner-section {
   background-image: url(../images/header.png);
@@ -49,16 +52,15 @@ header {
   left: 0;
   right: 0;
   display: flex;
-  z-index: 9;
+  z-index: 999;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0.5rem 3rem;
   transition: all 0.3s ease;
   .logo-container {
-    width: 200px;
     display: flex;
     align-items: center;
     img {
-      width: 100%;
+      width: 150px;
     }
     .logoSession {
       position: relative;
@@ -72,7 +74,7 @@ header {
         top: 50%;
         left: 0%;
         width: 1px;
-        height: 65px;
+        height: 50px;
         transform: translateY(-50%);
         background-color: #707070;
       }
@@ -84,8 +86,9 @@ header {
     ul {
       list-style: none;
       display: flex;
+      margin: 0;
       li {
-        margin: 2rem;
+        margin: 0 1.5rem;
         a {
           position: relative;
           text-decoration: none;
@@ -97,7 +100,7 @@ header {
             bottom: 5px;
             left: 0px;
             width: 100%;
-            height: 2px;
+            height: 4px;
             border-radius: 10px;
             background-color: #0abeb2;
             transform: scale(0);
@@ -120,7 +123,8 @@ header {
 .about-entrepreneur {
   display: flex;
   justify-content: space-between;
-  margin: 8rem 0;
+  padding-top: 5rem;
+  padding: 8rem;
   .entrep-image {
     width: 45%;
     img {
@@ -131,6 +135,9 @@ header {
     width: 45%;
     display: flex;
     align-items: center;
+    .name {
+      font-family: "Alishia-Mekayla";
+    }
   }
 }
 
@@ -161,9 +168,12 @@ footer#contact-info {
       top: 50%;
       right: 0%;
       width: 1px;
-      height: 50%;
+      height: 70%;
       transform: translateY(-50%);
       background-color: #707070;
+    }
+    img {
+      width: 350px;
     }
   }
   .contact-info {
@@ -174,25 +184,125 @@ footer#contact-info {
     .name {
       color: #0abeb2;
     }
+    .icon-sec {
+      display: flex;
+      a {
+        padding: 0.5rem;
+        transform: scale(1);
+        transition: all 0.3s ease;
+        // display: flex;
+        img {
+          width: 30px;
+        }
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 }
 
 .sessionPage {
+  padding: 0 8rem;
   .ssContainer {
-    margin-top: 8rem;
+    // margin-top: 8rem;
     .session-sub {
+      position: relative;
       display: flex;
-      padding-top: 12rem;
       justify-content: space-between;
+      &:last-child {
+        &::before {
+          display: none;
+        }
+      }
+      &::before {
+        content: "";
+        left: -33px;
+        bottom: 0;
+        border: 1px dashed black;
+        width: 69.4%;
+        position: absolute;
+      }
+
       .discription {
+        position: relative;
         display: flex;
         align-items: center;
         width: 30%;
+        padding: 6rem 0;
+        .brief {
+          position: absolute;
+          left: -130px;
+          display: flex;
+          color: #585858;
+          top: 50%;
+          background: white;
+          padding: 6px;
+          transform: rotate(270deg) translateY(-50%);
+        }
+        &::before {
+          content: "";
+          left: -38px;
+          top: 0;
+          border: 1px dashed black;
+          height: 100%;
+          position: absolute;
+        }
       }
       .sliderContianer {
         width: 60%;
+        padding: 6rem 0;
         img {
           width: 100%;
+        }
+
+        .sessionSlider {
+          height: 50vh;
+          .slick-track,
+          .slick-list {
+            height: 100%;
+            img {
+              padding: 0 2px;
+              height: 100%;
+            }
+          }
+          .sliderArr {
+            border: none;
+            background: rgba(129, 129, 129, 0.5);
+            padding: 0.25rem 0.5rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 9;
+            &.prev-arr {
+              right: unset;
+              left: 0px;
+              img {
+                left: 0px;
+              }
+            }
+            img {
+              width: 10px;
+              position: relative;
+              left: 0px;
+            }
+          }
+          .slick-dots {
+            bottom: 0px;
+            li {
+              button:before {
+                font-size: 1.5rem;
+                opacity: 1;
+                color: white;
+              }
+              &.slick-active {
+                button:before {
+                  color: red;
+                }
+              }
+            }
+          }
         }
       }
       &:first-child {
@@ -200,6 +310,73 @@ footer#contact-info {
       }
       &:last-child {
         padding-bottom: 10rem;
+      }
+    }
+  }
+}
+
+.home-page {
+  .slider-container {
+    margin-bottom: 3rem;
+    .ttlCntr {
+      text-align: center;
+      margin-bottom: 2rem;
+      .ltlTtl {
+        font-family: "Alishia-Mekayla";
+        margin: 0;
+      }
+      .gallSub {
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        font-size: 1rem;
+      }
+    }
+    #sliderPlay {
+      height: 70vh;
+      .slick-track,
+      .slick-list {
+        height: 100%;
+        img {
+          padding: 0 2px;
+          height: 100%;
+        }
+      }
+      .sliderArr {
+        border: none;
+        background: rgba(129, 129, 129, 0.5);
+        padding: 0.5rem 1rem;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9;
+        &.prev-arr {
+          right: unset;
+          left: 0px;
+          img {
+            left: 0px;
+          }
+        }
+        img {
+          width: 10px;
+          position: relative;
+          left: 0px;
+        }
+      }
+      .slick-dots {
+        bottom: 10px;
+        li {
+          button:before {
+            font-size: 1.5rem;
+            opacity: 1;
+            color: white;
+          }
+          &.slick-active {
+            button:before {
+              color: red;
+            }
+          }
+        }
       }
     }
   }
