@@ -5,6 +5,7 @@ $(document).ready(function () {
     centerMode: true,
     dots: true,
     slidesToShow: 1,
+    autoplay: true,
     variableWidth: true,
     prevArrow:
       "<button class='prev-arr sliderArr'><img src='./images/left-arrow.svg'/></button>",
@@ -16,6 +17,7 @@ $(document).ready(function () {
     centerMode: true,
     dots: true,
     slidesToShow: 1,
+    autoplay: true,
     variableWidth: true,
     prevArrow:
       "<button class='prev-arr sliderArr'><img src='./images/left-arrow.svg'/></button>",
@@ -24,12 +26,26 @@ $(document).ready(function () {
   });
 });
 
-// $(window).on("scroll", function (e) {
-//   if (document.documentElement.scrollTop < 50) {
-//     $("#header").removeClass("grayBG");
-//   } else {
-//     if (!$("#header").hasClass("grayBG")) {
-//       $("#header").addClass("grayBG");
-//     }
-//   }
-// });
+$(window).on("scroll", function (e) {
+  if (document.documentElement.scrollTop < 200) {
+    $(".home-page #header").removeClass("grayBG");
+  } else {
+    if (!$(".home-page #header").hasClass("grayBG")) {
+      $(".home-page #header").addClass("grayBG");
+    }
+  }
+});
+
+$(document).on("click", ".burger", function () {
+  $(".burger").toggleClass("clicked");
+  $(".csr-nav , .csr-nav .csr-nav-menu").toggleClass("show");
+});
+
+$(document).mouseup(function (e) {
+  var nav = $(".csr-nav  .csr-nav-menu");
+
+  if ($(".csr-nav").is(e.target) && !nav.is(e.target)) {
+    $(".csr-nav , .csr-nav .csr-nav-menu").removeClass("show");
+    $(".burger").removeClass("clicked");
+  }
+});
