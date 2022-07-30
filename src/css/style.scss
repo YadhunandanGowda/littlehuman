@@ -38,7 +38,7 @@
 #banner-section {
   background-image: url(../images/header.png);
   width: 100%;
-  min-height: 700px;
+  height: 700px;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,6 +68,7 @@ header {
         text-transform: uppercase;
         letter-spacing: 0.5rem;
         font-size: 1rem;
+        margin: 0;
         padding-left: 1.5rem;
         &::before {
           content: "";
@@ -225,6 +226,10 @@ header {
     }
     .csr-nav-menu ul {
       list-style: none;
+
+      &.hideDesk {
+        display: none;
+      }
       li {
         display: flex;
         justify-content: center;
@@ -263,7 +268,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding-top: 5rem;
-  padding: 8rem;
+  padding: 8rem 4rem;
   .entrep-image {
     width: 45%;
     img {
@@ -528,6 +533,150 @@ footer#contact-info {
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  header .headerMain .top-nav ul li {
+    margin: 0 1rem;
+  }
+  .sessionPage {
+    padding: 0 4rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #header {
+    padding: 0.5rem 1rem;
+    nav.csr-nav {
+      .csr-nav-menu {
+        ul {
+          &.hideDesk {
+            display: block;
+          }
+        }
+      }
+    }
+    .headerMain {
+      .mobHide {
+        display: none;
+      }
+      .logo-container {
+        img {
+          width: 100px;
+        }
+      }
+      .logoSession {
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        font-size: 0.75rem;
+        padding-left: 1rem;
+        &::before {
+          height: 35px;
+        }
+      }
+    }
+    .burger {
+      top: 20px;
+      right: 20px;
+    }
+  }
+
+  #banner-section {
+    height: 700px !important;
+  }
+  .about-entrepreneur {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    .entrep-image {
+      width: 100%;
+    }
+    .entrep-description {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+  footer#contact-info {
+    flex-direction: column;
+    padding: 5rem 2rem 3rem;
+    .logo-container {
+      padding-bottom: 2rem;
+      img {
+        width: 100%;
+        max-width: 350px;
+      }
+      &::after {
+        top: unset;
+        bottom: 0;
+        right: unset;
+        left: 50%;
+        width: 70%;
+        height: 1px;
+        transform: translateX(-50%);
+      }
+    }
+    .contact-info {
+      padding-top: 2rem;
+    }
+  }
+  .home-page {
+    #header {
+      .burger {
+        display: block;
+        top: 20px;
+        right: 20px;
+      }
+
+      nav.csr-nav {
+        .csr-nav-menu {
+          padding-top: 10rem;
+        }
+      }
+    }
+  }
+  .sessionPage {
+    padding: 0 1rem;
+    .ssContainer {
+      .session-sub {
+        flex-direction: column;
+        padding-top: 5rem;
+        &::before {
+          display: none;
+        }
+        .discription {
+          width: 100%;
+          padding: 1rem 0;
+          &::before {
+            display: none;
+          }
+          .brief {
+            display: none;
+          }
+        }
+        .sliderContianer {
+          width: 100%;
+          padding: 0;
+          .sessionSlider {
+            height: 500px;
+          }
+        }
+        &.reverseColumn {
+          flex-direction: column-reverse;
+        }
+      }
+    }
+    footer#contact-info {
+      padding: 5rem 0rem 3rem;
+    }
+    header nav.csr-nav .csr-nav-menu {
+      padding-top: 5rem;
+      ul li a {
+        padding: 1rem 0rem 0.5rem;
+        font-size: 1.5rem;
       }
     }
   }

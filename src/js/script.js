@@ -49,3 +49,12 @@ $(document).mouseup(function (e) {
     $(".burger").removeClass("clicked");
   }
 });
+
+$(document).on(
+  "click",
+  "header nav.csr-nav .csr-nav-menu ul li a",
+  function () {
+    $(".csr-nav , .csr-nav .csr-nav-menu").removeClass("show");
+    $(".burger").removeClass("clicked");
+  }
+);

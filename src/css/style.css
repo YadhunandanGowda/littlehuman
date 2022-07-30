@@ -31,7 +31,7 @@
 #banner-section {
   background-image: url(../images/header.png);
   width: 100%;
-  min-height: 700px;
+  height: 700px;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,6 +64,7 @@ header .headerMain .logo-container .logoSession {
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   font-size: 1rem;
+  margin: 0;
   padding-left: 1.5rem;
 }
 header .headerMain .logo-container .logoSession::before {
@@ -201,6 +202,9 @@ header nav.csr-nav .csr-nav-menu.show {
 header nav.csr-nav .csr-nav-menu ul {
   list-style: none;
 }
+header nav.csr-nav .csr-nav-menu ul.hideDesk {
+  display: none;
+}
 header nav.csr-nav .csr-nav-menu ul li {
   display: flex;
   justify-content: center;
@@ -236,7 +240,7 @@ header nav.csr-nav .csr-nav-menu ul li a:hover::before {
   display: flex;
   justify-content: space-between;
   padding-top: 5rem;
-  padding: 8rem;
+  padding: 8rem 4rem;
 }
 .about-entrepreneur .entrep-image {
   width: 45%;
@@ -482,4 +486,127 @@ footer#contact-info .contact-info .icon-sec a:hover {
 }
 .home-page .slider-container #sliderPlay .slick-dots li.slick-active button:before {
   color: red;
+}
+
+@media only screen and (max-width: 1024px) {
+  header .headerMain .top-nav ul li {
+    margin: 0 1rem;
+  }
+  .sessionPage {
+    padding: 0 4rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #header {
+    padding: 0.5rem 1rem;
+  }
+  #header nav.csr-nav .csr-nav-menu ul.hideDesk {
+    display: block;
+  }
+  #header .headerMain .mobHide {
+    display: none;
+  }
+  #header .headerMain .logo-container img {
+    width: 100px;
+  }
+  #header .headerMain .logoSession {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 0.75rem;
+    padding-left: 1rem;
+  }
+  #header .headerMain .logoSession::before {
+    height: 35px;
+  }
+  #header .burger {
+    top: 20px;
+    right: 20px;
+  }
+  #banner-section {
+    height: 700px !important;
+  }
+  .about-entrepreneur {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+  }
+  .about-entrepreneur .entrep-image {
+    width: 100%;
+  }
+  .about-entrepreneur .entrep-description {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  footer#contact-info {
+    flex-direction: column;
+    padding: 5rem 2rem 3rem;
+  }
+  footer#contact-info .logo-container {
+    padding-bottom: 2rem;
+  }
+  footer#contact-info .logo-container img {
+    width: 100%;
+    max-width: 350px;
+  }
+  footer#contact-info .logo-container::after {
+    top: unset;
+    bottom: 0;
+    right: unset;
+    left: 50%;
+    width: 70%;
+    height: 1px;
+    transform: translateX(-50%);
+  }
+  footer#contact-info .contact-info {
+    padding-top: 2rem;
+  }
+  .home-page #header .burger {
+    display: block;
+    top: 20px;
+    right: 20px;
+  }
+  .home-page #header nav.csr-nav .csr-nav-menu {
+    padding-top: 10rem;
+  }
+  .sessionPage {
+    padding: 0 1rem;
+  }
+  .sessionPage .ssContainer .session-sub {
+    flex-direction: column;
+    padding-top: 5rem;
+  }
+  .sessionPage .ssContainer .session-sub::before {
+    display: none;
+  }
+  .sessionPage .ssContainer .session-sub .discription {
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .sessionPage .ssContainer .session-sub .discription::before {
+    display: none;
+  }
+  .sessionPage .ssContainer .session-sub .discription .brief {
+    display: none;
+  }
+  .sessionPage .ssContainer .session-sub .sliderContianer {
+    width: 100%;
+    padding: 0;
+  }
+  .sessionPage .ssContainer .session-sub .sliderContianer .sessionSlider {
+    height: 500px;
+  }
+  .sessionPage .ssContainer .session-sub.reverseColumn {
+    flex-direction: column-reverse;
+  }
+  .sessionPage footer#contact-info {
+    padding: 5rem 0rem 3rem;
+  }
+  .sessionPage header nav.csr-nav .csr-nav-menu {
+    padding-top: 5rem;
+  }
+  .sessionPage header nav.csr-nav .csr-nav-menu ul li a {
+    padding: 1rem 0rem 0.5rem;
+    font-size: 1.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
