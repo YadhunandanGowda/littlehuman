@@ -28,6 +28,17 @@
   text-decoration: underline;
 }
 
+#whatsappIcon {
+  position: fixed;
+  top: 70%;
+  right: 10px;
+  transform: translateY(-70%);
+  z-index: 999;
+}
+#whatsappIcon img {
+  width: 60px;
+}
+
 #banner-section {
   background-image: url(../images/header.png);
   width: 100%;
@@ -37,6 +48,10 @@
   background-size: cover;
   background-position: center;
   margin-bottom: 5rem;
+}
+
+.hideDesk {
+  display: none;
 }
 
 header {
@@ -201,9 +216,6 @@ header nav.csr-nav .csr-nav-menu.show {
 }
 header nav.csr-nav .csr-nav-menu ul {
   list-style: none;
-}
-header nav.csr-nav .csr-nav-menu ul.hideDesk {
-  display: none;
 }
 header nav.csr-nav .csr-nav-menu ul li {
   display: flex;
@@ -497,14 +509,14 @@ footer#contact-info .contact-info .icon-sec a:hover {
   }
 }
 @media only screen and (max-width: 900px) {
-  #header {
-    padding: 0.5rem 1rem;
+  .mobHide {
+    display: none;
   }
-  #header nav.csr-nav .csr-nav-menu ul.hideDesk {
+  .hideDesk {
     display: block;
   }
-  #header .headerMain .mobHide {
-    display: none;
+  #header {
+    padding: 0.5rem 1rem;
   }
   #header .headerMain .logo-container img {
     width: 100px;
@@ -560,6 +572,9 @@ footer#contact-info .contact-info .icon-sec a:hover {
   }
   footer#contact-info .contact-info {
     padding-top: 2rem;
+  }
+  footer#contact-info .contact-info .whatsappInfo img {
+    width: 30px;
   }
   .home-page #header .burger {
     display: block;

@@ -35,6 +35,17 @@
 //   padding: 0 2%;
 // }
 
+#whatsappIcon {
+  position: fixed;
+  top: 70%;
+  right: 10px;
+  transform: translateY(-70%);
+  z-index: 999;
+  img {
+    width: 60px;
+  }
+}
+
 #banner-section {
   background-image: url(../images/header.png);
   width: 100%;
@@ -44,6 +55,9 @@
   background-size: cover;
   background-position: center;
   margin-bottom: 5rem;
+}
+.hideDesk {
+  display: none;
 }
 
 header {
@@ -227,9 +241,6 @@ header {
     .csr-nav-menu ul {
       list-style: none;
 
-      &.hideDesk {
-        display: none;
-      }
       li {
         display: flex;
         justify-content: center;
@@ -548,21 +559,15 @@ footer#contact-info {
 }
 
 @media only screen and (max-width: 900px) {
+  .mobHide {
+    display: none;
+  }
+  .hideDesk {
+    display: block;
+  }
   #header {
     padding: 0.5rem 1rem;
-    nav.csr-nav {
-      .csr-nav-menu {
-        ul {
-          &.hideDesk {
-            display: block;
-          }
-        }
-      }
-    }
     .headerMain {
-      .mobHide {
-        display: none;
-      }
       .logo-container {
         img {
           width: 100px;
@@ -621,6 +626,11 @@ footer#contact-info {
     }
     .contact-info {
       padding-top: 2rem;
+      .whatsappInfo {
+        img {
+          width: 30px;
+        }
+      }
     }
   }
   .home-page {
