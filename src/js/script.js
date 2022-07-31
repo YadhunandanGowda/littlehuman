@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $("#sliderPlay").slick({
     centerMode: true,
-    dots: true,
+    // dots: true,
     slidesToShow: 1,
     autoplay: true,
     variableWidth: true,
@@ -15,7 +15,7 @@ $(document).ready(function () {
 
   $(".sessionSlider").slick({
     centerMode: true,
-    dots: true,
+    // dots: true,
     slidesToShow: 1,
     autoplay: true,
     variableWidth: true,

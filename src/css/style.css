@@ -30,9 +30,8 @@
 
 #whatsappIcon {
   position: fixed;
-  top: 70%;
-  right: 10px;
-  transform: translateY(-70%);
+  right: 1rem;
+  bottom: 1rem;
   z-index: 999;
 }
 #whatsappIcon img {
@@ -73,6 +72,9 @@ header .headerMain .logo-container {
 }
 header .headerMain .logo-container img {
   width: 150px;
+}
+header .headerMain .logo-container img.blueLogo {
+  display: none;
 }
 header .headerMain .logo-container .logoSession {
   position: relative;
@@ -129,6 +131,12 @@ header .headerMain .top-nav ul li a:hover::before {
 header.grayBG {
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.0509803922);
+}
+header.grayBG .logo-container img.whiteLogo {
+  display: none;
+}
+header.grayBG .logo-container img.blueLogo {
+  display: inline-block;
 }
 header .burger {
   width: 30px;
@@ -246,6 +254,9 @@ header nav.csr-nav .csr-nav-menu ul li a::before {
 }
 header nav.csr-nav .csr-nav-menu ul li a:hover::before {
   transform: scale(1);
+}
+header nav.csr-nav .csr-nav-menu ul li a img {
+  width: 35px;
 }
 
 .about-entrepreneur {
@@ -515,23 +526,27 @@ footer#contact-info .contact-info .icon-sec a:hover {
   .hideDesk {
     display: block;
   }
-  #header {
+  header {
     padding: 0.5rem 1rem;
   }
-  #header .headerMain .logo-container img {
-    width: 100px;
+  header .headerMain .top-nav.mobHide {
+    display: none;
   }
-  #header .headerMain .logoSession {
-    position: relative;
-    text-transform: uppercase;
+  header .headerMain .top-nav ul.mobHide {
+    display: none;
+  }
+  header .headerMain .logo-container .logoSession {
     letter-spacing: 0.25rem;
-    font-size: 0.75rem;
-    padding-left: 1rem;
+    font-size: 0.85rem;
+    padding-left: 0.75rem;
   }
-  #header .headerMain .logoSession::before {
+  header .headerMain .logo-container .logoSession::before {
     height: 35px;
   }
-  #header .burger {
+  header .headerMain .logo-container img {
+    width: 100px;
+  }
+  header .burger {
     top: 20px;
     right: 20px;
   }
@@ -558,7 +573,7 @@ footer#contact-info .contact-info .icon-sec a:hover {
     padding-bottom: 2rem;
   }
   footer#contact-info .logo-container img {
-    width: 100%;
+    width: 88%;
     max-width: 350px;
   }
   footer#contact-info .logo-container::after {
@@ -583,6 +598,9 @@ footer#contact-info .contact-info .icon-sec a:hover {
   }
   .home-page #header nav.csr-nav .csr-nav-menu {
     padding-top: 10rem;
+  }
+  .home-page #header nav.csr-nav .csr-nav-menu ul li a {
+    font-size: 1.5rem;
   }
   .sessionPage {
     padding: 0 1rem;
@@ -618,7 +636,7 @@ footer#contact-info .contact-info .icon-sec a:hover {
     padding: 5rem 0rem 3rem;
   }
   .sessionPage header nav.csr-nav .csr-nav-menu {
-    padding-top: 5rem;
+    padding-top: 10rem;
   }
   .sessionPage header nav.csr-nav .csr-nav-menu ul li a {
     padding: 1rem 0rem 0.5rem;
