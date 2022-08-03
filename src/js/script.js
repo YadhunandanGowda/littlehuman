@@ -5,7 +5,7 @@ $(document).ready(function () {
     centerMode: true,
     // dots: true,
     slidesToShow: 1,
-    // autoplay: true,
+    autoplay: true,
     variableWidth: true,
     prevArrow:
       "<button class='prev-arr sliderArr'><img src='./images/left-arrow.svg'/></button>",

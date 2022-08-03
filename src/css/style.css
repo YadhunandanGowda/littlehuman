@@ -267,9 +267,11 @@ header nav.csr-nav .csr-nav-menu ul li a img {
 }
 .about-entrepreneur .entrep-image {
   width: 45%;
+  display: flex;
+  justify-content: center;
 }
 .about-entrepreneur .entrep-image img {
-  width: 100%;
+  width: 90%;
 }
 .about-entrepreneur .entrep-description {
   width: 45%;

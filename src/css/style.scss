@@ -298,8 +298,10 @@ header {
   padding: 8rem 4rem;
   .entrep-image {
     width: 45%;
+    display: flex;
+    justify-content: center;
     img {
-      width: 100%;
+      width: 90%;
     }
   }
   .entrep-description {
